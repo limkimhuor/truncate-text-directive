@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Truncate text directive</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-resource/1.5.8/angular-resource.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="truncate_text_directive.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-app="myApp" ng-controller="homeCtrl as vm">
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3">
+      <h3>Before use truncate directive</h3>
+      <br>
+      <h5 ng-bind="vm.data.title"></h5>
+      <span ng-bind="vm.data.content"></span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3">
+      <h3>Using truncate directive without less and more button</h3>
+      <br>
+      <h5 ng-bind="vm.data.title"></h5>
+      <span truncate-text-dir="vm.data.content" chars-limit="120" no-toggling=true></span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3">
+      <h3>Using truncate directive with less and more button</h3>
+      <br>
+      <h5 ng-bind="vm.data.title"></h5>
+      <span truncate-text-dir="vm.data.content" chars-limit="120"></span>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6 col-xs-6 col-md-offset-3 col-xs-offset-3">
+      <h3>Read more at:</h3><a href="https://viblo.asia/lim.kimhuor/posts/qzakzLDWGyO">Viblo link</a>
+    </div>
+  </div>
+</body>
+</html>
